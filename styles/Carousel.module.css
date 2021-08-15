@@ -1,0 +1,66 @@
+.holder {
+  padding: 10px;
+}
+
+.item {
+  color: white;
+  height: 50vh;
+  width: 100%;
+  background-position: center;
+  padding: 25px;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #00000086;
+  z-index: -1;
+}
+
+.item span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.item h1 {
+  margin: 50px 0 15px 0;
+  max-width: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.item h1:hover {
+  text-shadow: 0 0 14px gainsboro;
+}
+
+.item p {
+  max-width: 60%;
+}
+
+@media only screen and (max-width: 1028px) {
+  .item h1,
+  .item p {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .item {
+    height: calc(100vh - 100px);
+    padding: 10px;
+    text-align: center;
+  }
+  .item h1,
+  .item p {
+    max-width: 100%;
+  }
+}

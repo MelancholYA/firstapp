@@ -1,0 +1,14 @@
+.latestPosts {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  margin: 10px;
+  width: 30%;
+}
+
+.latestPosts h3 {
+  background: blue;
+  padding: 10px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}

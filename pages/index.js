@@ -13,14 +13,23 @@ export default function Home({ data }) {
 			</Head>
 
 			<Carousel />
-			<LatestPosts data={data} />
+			<LatestPosts data={data.LatestPostes} />
 		</div>
 	);
 }
 export async function getStaticProps() {
-	const res = await fetch(`${url}/posts?per_page=3`);
-	const data = await res.json();
+	const [hot, latest] = await Promise.all([
+		fetch(`${url}/posts?per_page=5`),
+		fetch(`${url}/posts?per_page=3`),
+	]);
+	const PopularPostes = await hot.json();
+	const LatestPostes = await latest.json();
 	return {
-		props: { data }, // will be passed to the page component as props
+		props: {
+			data: {
+				PopularPostes,
+				LatestPostes,
+			},
+		}, // will be passed to the page component as props
 	};
 }

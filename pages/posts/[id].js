@@ -21,7 +21,11 @@ export default Post;
 export async function getStaticProps(context) {
 	const res = await fetch(`${url}/posts?slug=${context.params.id}`);
 	const data = await res.json();
-	console.log(context);
+	if (!data.length) {
+		return {
+			notFound: true,
+		};
+	}
 	return {
 		props: { data: data[0] }, // will be passed to the page component as props
 	};

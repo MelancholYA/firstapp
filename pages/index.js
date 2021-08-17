@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Carousel from '../componants/Carousel';
 import LatestPosts from '../componants/LatestPosts';
+
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 export default function Home({ data }) {
 	return (

@@ -1,15 +1,23 @@
 import Styles from '../styles/Categories.module.css';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { PostContext } from './contexts';
 const Categories = ({ data }) => {
+	const { setCategory } = useContext(PostContext);
 	data = data.filter((piece) => piece.description.length !== 0);
-	console.error(data);
+	console.log(data);
 	return (
 		<div className={Styles.Categories}>
 			<h3>Categories</h3>
 			<ul>
 				{data &&
 					data.map((categorie) => (
-						<Link href={'/categories/' + categorie.slug} key={categorie.id}>
+						<Link
+							href={{
+								pathname: '/categories/[slug]/[id]',
+								query: { id: categorie.id, slug: categorie.slug },
+							}}
+							key={categorie.id}>
 							<li className={Styles.Category}>
 								<h4>{categorie.name}</h4>
 								<div

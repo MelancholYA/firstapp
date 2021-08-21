@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
 		<>
 			<Nav />
 			<NextNprogress
-				color='#29D'
+				color='#e91e63'
 				startPosition={0.3}
 				stopDelayMs={200}
 				height={3}

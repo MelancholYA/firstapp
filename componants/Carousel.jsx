@@ -3,9 +3,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Styles from '../styles/Carousel.module.css';
-import background from '../assets/bg1.jpg';
-import Link from 'next/link';
-export default function Carousel() {
+
+import Slide from './Slide';
+export default function Carousel({ data }) {
+	console.log(data);
 	const settings = {
 		accessibility: false,
 		dots: true,
@@ -42,28 +43,8 @@ export default function Carousel() {
 	];
 	return (
 		<Slider {...settings}>
-			{items.map((item) => (
-				<div key={item.key} className={Styles.holder}>
-					<div
-						style={{
-							backgroundImage: `url('${background.src}')`,
-						}}
-						className={Styles.item}>
-						<span>{item.source}</span>
-						<Link href='ggfd'>
-							<h1>{item.title}</h1>
-						</Link>
-
-						<p>
-							{item.excerpt.split(' ').length <= 50
-								? item.excerpt
-								: ' '.concat(
-										item.excerpt.split(' ').slice(0, 49).join(' '),
-										'...',
-								  )}
-						</p>
-					</div>
-				</div>
+			{data.map((item) => (
+				<Slide key={item.id} item={item} Styles={Styles} />
 			))}
 		</Slider>
 	);

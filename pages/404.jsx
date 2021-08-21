@@ -15,7 +15,7 @@ const Custom404 = () => {
 			<img src={Illustration404.src} alt='llustration of 404 status' />
 			<div className='text'>
 				<h1>The page you requested seems to be unreachable </h1>
-				<h5>we'll redirect you to the home page afte {duray}s</h5>
+				<h5>we&lsquo;ll redirect you to the home page afte {duray}s</h5>
 			</div>
 		</div>
 	);

@@ -21,7 +21,6 @@ export default function Home({ data }) {
 			) : (
 				<>
 					<div
-						class='container'
 						style={{
 							display: 'flex',
 							flexDirection: 'column',

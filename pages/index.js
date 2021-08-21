@@ -4,6 +4,7 @@ import LatestPosts from '../componants/LatestPosts';
 
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 export default function Home({ data }) {
+	console.log(data);
 	return (
 		<div>
 			<Head>
@@ -17,7 +18,7 @@ export default function Home({ data }) {
 		</div>
 	);
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const [hot, latest] = await Promise.all([
 		fetch(`${url}/posts?per_page=5`),
 		fetch(`${url}/posts?per_page=3`),

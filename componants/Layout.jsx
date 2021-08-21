@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import MainStyles from '../styles/main.module.css';
+import Styles from '../styles/main.module.css';
 import NextNprogress from 'nextjs-progressbar';
 const Layout = ({ children }) => {
 	return (
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
 				height={3}
 				showOnShallow={true}
 			/>
-			<main className={MainStyles.main}>{children}</main>
+			<main className={Styles.main}>{children}</main>
 		</>
 	);
 };

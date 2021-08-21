@@ -6,9 +6,79 @@
 }
 
 .Categories h3 {
-  background: blue;
+  background: #e91e63;
   padding: 10px;
   color: white;
   font-weight: 400;
   text-align: center;
+}
+
+.Categories .Category {
+  position: relative;
+  overflow: hidden;
+  margin: 15px 5px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 2px 14px gainsboro;
+          box-shadow: 0 2px 14px gainsboro;
+}
+
+.Categories .Category:hover h4 {
+  color: white;
+}
+
+.Categories .Category:hover h4::after {
+  width: 100%;
+}
+
+.Categories .Category:hover::after {
+  background-color: #9292926e;
+}
+
+.Categories .Category::after {
+  content: '';
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #ffffff6e;
+}
+
+.Categories .Category h4 {
+  position: relative;
+  margin: 10px;
+  margin-right: 0;
+  padding: 10px;
+  background-color: #ffffffad;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 0;
+}
+
+.Categories .Category h4::after {
+  content: '';
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  z-index: -1;
+  background-color: #e91e63;
+}
+
+.Categories .Category img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  z-index: -1;
 }

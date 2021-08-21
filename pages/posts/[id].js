@@ -2,7 +2,6 @@ import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 const Post = ({ data }) => {
-	console.log(data);
 	return (
 		<>
 			<Head>

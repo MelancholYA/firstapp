@@ -4,7 +4,6 @@ import Categories from '../componants/Categories';
 
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 export default function Home({ data }) {
-	console.log(data);
 	return (
 		<div>
 			<Head>

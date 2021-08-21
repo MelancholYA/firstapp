@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import Styles from '../styles/main.module.css';
+import Styles from '../styles/Layout.module.css';
 import NextNprogress from 'nextjs-progressbar';
 const Layout = ({ children }) => {
 	return (

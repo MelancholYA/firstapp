@@ -17,7 +17,8 @@ const Categories = ({ data }) => {
 								pathname: '/categories/[slug]/[id]',
 								query: { id: categorie.id, slug: categorie.slug },
 							}}
-							key={categorie.id}>
+							key={categorie.id}
+							passHref>
 							<li className={Styles.Category}>
 								<h4>{categorie.name}</h4>
 								<div

@@ -41,7 +41,7 @@ export default function Home({ data }) {
 		</div>
 	);
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	try {
 		const [latest, categories] = await Promise.all([
 			fetch(`${url}/posts?per_page=4`),

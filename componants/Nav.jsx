@@ -27,9 +27,15 @@ const Nav = () => {
 				className={
 					HeaderStyles.nav + ' ' + (menuOpened && HeaderStyles.navOpen)
 				}>
-				<Link href='/'>Home</Link>
-				<Link href='/about'>About</Link>
-				<Link href='/contact'>Contact us</Link>
+				<Link href='/' passHref>
+					Home
+				</Link>
+				<Link href='/about' passHref>
+					About
+				</Link>
+				<Link href='/contact' passHref>
+					Contact us
+				</Link>
 			</nav>
 		</header>
 	);

@@ -29,7 +29,7 @@ const Slide = ({ item, Styles }) => {
 				className={Styles.item}>
 				<span>{moment(item.date).format(' MMMM Do YYYY')}</span>
 				<div>
-					<Link href='ggfd'>
+					<Link href='ggfd' passHref>
 						<h1
 							dangerouslySetInnerHTML={{
 								__html: item.title.rendered,

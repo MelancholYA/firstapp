@@ -13,3 +13,16 @@
 .container img {
   width: 50%;
 }
+
+.container h1 {
+  color: #353535;
+}
+
+.container a {
+  margin: 30px 0;
+  display: inline-block;
+  background: #353535;
+  padding: 15px;
+  border-radius: 7px;
+  color: #f5cb76;
+}

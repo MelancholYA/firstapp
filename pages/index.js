@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Carousel from '../componants/Carousel';
-import LatestPosts from '../componants/LatestPosts';
+import Categories from '../componants/Categories';
 
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 export default function Home({ data }) {
@@ -13,22 +13,22 @@ export default function Home({ data }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Carousel />
-			<LatestPosts data={data.LatestPostes} />
+			<Carousel data={data.LatestPostes} />
+			<Categories data={data.Categories} />
 		</div>
 	);
 }
 export async function getServerSideProps() {
-	const [hot, latest] = await Promise.all([
-		fetch(`${url}/posts?per_page=5`),
-		fetch(`${url}/posts?per_page=3`),
+	const [latest, categories] = await Promise.all([
+		fetch(`${url}/posts?per_page=4`),
+		fetch(`${url}/categories?orderby=count&order=desc`),
 	]);
-	const PopularPostes = await hot.json();
+	const Categories = await categories.json();
 	const LatestPostes = await latest.json();
 	return {
 		props: {
 			data: {
-				PopularPostes,
+				Categories,
 				LatestPostes,
 			},
 		}, // will be passed to the page component as props

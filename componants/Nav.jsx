@@ -12,7 +12,7 @@ const Nav = () => {
 	}, [router.pathname]);
 	return (
 		<header className={HeaderStyles.header}>
-			<Link href='/'>
+			<Link href='/' passHref>
 				<Image src='/vercel.svg' width={120} height={50} />
 			</Link>
 

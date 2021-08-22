@@ -1,7 +1,11 @@
 import Styles from '../styles/MainPost.module.css';
 import moment from 'moment';
 const Post = ({ width, post }) => {
-	console.log(post);
+	const bodyParts = post.content.rendered.split(
+		'Pin Below To Save On Pinterest',
+	);
+	//.findIndex((item) => item == 'Pin');
+
 	return (
 		<div className={Styles.post} style={{ width: width }}>
 			<div className={Styles.title}>
@@ -14,7 +18,7 @@ const Post = ({ width, post }) => {
 
 			<div
 				dangerouslySetInnerHTML={{
-					__html: post.content.rendered,
+					__html: bodyParts[0],
 				}}></div>
 		</div>
 	);

@@ -1,0 +1,63 @@
+.post {
+  width: calc(100vw - 330px);
+  padding: 20px 50px;
+}
+
+.post ol,
+.post ul {
+  list-style: inside;
+}
+
+.post ol li,
+.post ul li {
+  margin: 10px 15px;
+}
+
+.post .has-text-align-center has-text-color {
+  display: none;
+}
+
+.post iframe {
+  width: 100%;
+  height: calc((60vw - 330px) * 9 / 16);
+  margin: 50px auto;
+}
+
+.post h2 {
+  margin: 50px 0 20px 0;
+  border-left: 10px solid red;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.post figure {
+  margin: 10px auto;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  -webkit-box-shadow: 0 -10px 14px #0000002e;
+          box-shadow: 0 -10px 14px #0000002e;
+  border-radius: 7px;
+}
+
+.post figure figcaption {
+  padding: 10px;
+}
+
+.post figure img {
+  float: unset;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.post svg {
+  width: 10px;
+  margin: 0 10px;
+}
+
+.post p {
+  margin: 10px 0;
+  font-size: 22px;
+  line-height: 1.7;
+}

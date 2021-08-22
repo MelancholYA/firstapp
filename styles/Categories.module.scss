@@ -4,12 +4,37 @@
 	margin: 10px;
 	width: 300px;
 	box-shadow: 0 0 14px gainsboro;
+	position: sticky;
+	top: 10px;
+	height: calc(100vh - 35px);
+	overflow: auto;
+	flex-shrink: 0;
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #e95a8a;
+		outline: 5px solid #8d113b;
+		cursor: pointer;
+		transition: 0.3s;
+		&:hover {
+			background-color: #e91e63;
+		}
+	}
 	h3 {
 		background: #e91e63;
 		padding: 10px;
 		color: white;
 		font-weight: 400;
 		text-align: center;
+		position: sticky;
+		top: 0;
+		z-index: 9;
+		box-shadow: 0 5px 14px gainsboro;
 	}
 	.Category {
 		position: relative;

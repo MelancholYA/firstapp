@@ -2,9 +2,12 @@ import Head from 'next/head';
 import Carousel from '../componants/Carousel';
 import Categories from '../componants/Categories';
 import cones from '../assets/cones.png';
+import Styles from '../styles/MainPost.module.css';
 
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 export default function Home({ data }) {
+	console.clear();
+	console.log(data);
 	return (
 		<div>
 			{data ? (
@@ -15,8 +18,25 @@ export default function Home({ data }) {
 						<link rel='icon' href='/favicon.ico' />
 					</Head>
 
-					<Carousel data={data.LatestPostes} />
-					<Categories data={data.Categories} />
+					<Carousel data={data.LatestPostes.filter((item, i) => i !== 0)} />
+					<div
+						style={{
+							display: 'flex',
+							alignItems: 'flex-start',
+							justifyContent: 'space-between',
+						}}>
+						<Categories data={data.Categories} />
+						<div
+							className={Styles.post}
+							dangerouslySetInnerHTML={{
+								__html: data.LatestPostes[0].content.rendered,
+							}}></div>
+					</div>
+					<h1>blabla</h1>
+					<h1>blabla</h1>
+					<h1>blabla</h1>
+					<h1>blabla</h1>
+					<h1>blabla</h1>
 				</>
 			) : (
 				<>
@@ -58,6 +78,7 @@ export async function getStaticProps() {
 			}, // will be passed to the page component as props
 		};
 	} catch (err) {
+		console.log(err);
 		return {
 			props: {
 				data: false,

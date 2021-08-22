@@ -1,0 +1,10 @@
+.wp-block-group {
+  margin: 20px 0;
+}
+
+.wp-block-group iframe {
+  width: 750px;
+  height: 421.875px;
+  aspect-ratio: 1/1;
+  margin: 50px auto;
+}

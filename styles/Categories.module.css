@@ -57,6 +57,7 @@
   border-radius: 7px;
   -webkit-box-shadow: 0 2px 14px gainsboro;
           box-shadow: 0 2px 14px gainsboro;
+  background: linear-gradient(40deg, #eda9c0 13%, #c5a0cd 87%);
 }
 
 .Categories .Category:hover h4 {

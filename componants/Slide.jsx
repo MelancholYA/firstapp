@@ -8,11 +8,9 @@ const Slide = ({ item, Styles }) => {
 			let imageLink = await fetch(url + '/media/' + item.featured_media).then(
 				(res) => res.json(),
 			);
-			console.log(imageLink);
-			setBackground(imageLink.media_details.sizes.medium.source_url);
-		} catch (error) {
-			console.log(error.response);
-		}
+
+			setBackground(imageLink.media_details.sizes.thumbnail.source_url);
+		} catch (error) {}
 	};
 	useEffect(() => {
 		getImages();
@@ -27,9 +25,12 @@ const Slide = ({ item, Styles }) => {
 						: 'linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%)',
 				}}
 				className={Styles.item}>
-				<span>{moment(item.date).format(' MMMM Do YYYY')}</span>
+				<span>
+					{moment(item.date).format(' MMMM Do YYYY')} -{' '}
+					{item.author_info.display_name}
+				</span>
 				<div>
-					<Link href='ggfd' passHref>
+					<Link href={'posts/' + item.slug} passHref>
 						<h1
 							dangerouslySetInnerHTML={{
 								__html: item.title.rendered,

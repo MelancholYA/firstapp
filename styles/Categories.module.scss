@@ -43,6 +43,11 @@
 		margin: 15px;
 		border-radius: 7px;
 		box-shadow: 0 2px 14px gainsboro;
+		background: linear-gradient(
+			40deg,
+			rgb(237, 169, 192) 13%,
+			rgb(197, 160, 205) 87%
+		);
 
 		&:hover {
 			h4 {

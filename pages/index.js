@@ -2,12 +2,11 @@ import Head from 'next/head';
 import Carousel from '../componants/Carousel';
 import Categories from '../componants/Categories';
 import cones from '../assets/cones.png';
-import Styles from '../styles/MainPost.module.css';
+
+import Post from '../componants/Post';
 
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 export default function Home({ data }) {
-	console.clear();
-	console.log(data);
 	return (
 		<div>
 			{data ? (
@@ -26,11 +25,7 @@ export default function Home({ data }) {
 							justifyContent: 'space-between',
 						}}>
 						<Categories data={data.Categories} />
-						<div
-							className={Styles.post}
-							dangerouslySetInnerHTML={{
-								__html: data.LatestPostes[0].content.rendered,
-							}}></div>
+						<Post width='calc(100vw - 500px)' post={data.LatestPostes[0]} />
 					</div>
 					<h1>blabla</h1>
 					<h1>blabla</h1>
@@ -78,7 +73,6 @@ export async function getStaticProps() {
 			}, // will be passed to the page component as props
 		};
 	} catch (err) {
-		console.log(err);
 		return {
 			props: {
 				data: false,

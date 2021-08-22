@@ -2,7 +2,6 @@ import { useRouter } from 'next/dist/client/router';
 
 const Category = ({ data, stars }) => {
 	const router = useRouter();
-	console.log(data);
 
 	return (
 		<>

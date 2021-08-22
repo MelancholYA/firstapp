@@ -5,7 +5,7 @@ import { PostContext } from './contexts';
 const Categories = ({ data }) => {
 	const { setCategory } = useContext(PostContext);
 	data = data.filter((piece) => piece.description.length !== 0);
-	console.log(data);
+
 	return (
 		<div className={Styles.Categories}>
 			<h3>Categories</h3>

@@ -1,19 +1,21 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
+import PostBody from '../../componants/Post';
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 const Post = ({ data }) => {
 	return (
-		<>
-			<Head>
-				<title>Blog name | {data.yoast_head_json.title}</title>
-				<meta name='description' content={data.yoast_head_json.title} />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
-			<div
-				dangerouslySetInnerHTML={{
-					__html: data.content.rendered,
-				}}></div>
-		</>
+		<PostBody width='100%' post={data} />
+		// <>
+		// 	{/* <Head>
+		// 		<title>Blog name | {data.yoast_head_json.title}</title>
+		// 		<meta name='description' content={data.yoast_head_json.title} />
+		// 		<link rel='icon' href='/favicon.ico' />
+		// 	</Head> */}
+		// 	<div
+		// 		dangerouslySetInnerHTML={{
+		// 			__html: data.content.rendered,
+		// 		}}></div>
+		// </>
 	);
 };
 export default Post;

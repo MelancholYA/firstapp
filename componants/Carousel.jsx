@@ -6,7 +6,6 @@ import Styles from '../styles/Carousel.module.css';
 
 import Slide from './Slide';
 export default function Carousel({ data }) {
-	console.log(data);
 	const settings = {
 		accessibility: false,
 		dots: true,

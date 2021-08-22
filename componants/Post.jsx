@@ -8,7 +8,7 @@ const Post = ({ width, post }) => {
 				<h1>{post.title.rendered}</h1>
 				<span>
 					{moment(post.date).format(' MMMM Do YYYY')} -{' '}
-					{post.author_info.display_name}
+					{post.author_info?.display_name}
 				</span>
 			</div>
 

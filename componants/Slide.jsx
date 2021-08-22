@@ -27,7 +27,7 @@ const Slide = ({ item, Styles }) => {
 				className={Styles.item}>
 				<span>
 					{moment(item.date).format(' MMMM Do YYYY')} -{' '}
-					{item.author_info.display_name}
+					{item.author_info?.display_name}
 				</span>
 				<div>
 					<Link href={'posts/' + item.slug} passHref>

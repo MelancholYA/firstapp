@@ -26,24 +26,31 @@ const Post = ({ data }) => {
 	useEffect(() => {
 		getSimilars();
 	}, [data.id]);
+	console.log(data);
 	return (
-		<div
-			className={Styles.container}
-			style={{
-				display: 'flex',
-				alignItems: 'flex-start',
-				justifyContent: 'space-between',
-			}}>
-			<PostBody width='calc(100vw - 500px)' post={data} />
-			<Similars data={posts} />
-		</div>
+		<>
+			<Head>
+				<title
+					dangerouslySetInnerHTML={{
+						__html: `Blog name | ${data.title.rendered}`,
+					}}></title>
+				<meta name='description' content={data.excerpt.rendered} />
+				<link rel='icon' href='/favicon.ico' />
+			</Head>
+			<div
+				className={Styles.container}
+				style={{
+					display: 'flex',
+					alignItems: 'flex-start',
+					justifyContent: 'space-between',
+				}}>
+				<PostBody width='calc(100vw - 500px)' post={data} />
+				<Similars data={posts} />
+			</div>
+		</>
 
 		// <>
-		// 	{/* <Head>
-		// 		<title>Blog name | {data.yoast_head_json.title}</title>
-		// 		<meta name='description' content={data.yoast_head_json.title} />
-		// 		<link rel='icon' href='/favicon.ico' />
-		// 	</Head> */}
+		//
 		// 	<div
 		// 		dangerouslySetInnerHTML={{
 		// 			__html: data.content.rendered,

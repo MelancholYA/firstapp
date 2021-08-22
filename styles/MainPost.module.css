@@ -1,6 +1,5 @@
 .post {
   padding: 20px;
-  width: calc(100vw - 500px);
   border-left: 5px solid pink;
   -webkit-box-shadow: -10px 10px 27px -5px #f500a824;
           box-shadow: -10px 10px 27px -5px #f500a824;
@@ -77,4 +76,18 @@
 
 .post .title h1 {
   margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 481px) {
+  .post {
+    width: 100% !important;
+    border: 0;
+    border-top: 5px solid pink;
+    -webkit-box-shadow: 0px -10px 27px -5px #f500a824;
+            box-shadow: 0px -10px 27px -5px #f500a824;
+    margin-top: 20px;
+  }
+  .post figure {
+    width: 100%;
+  }
 }

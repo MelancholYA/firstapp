@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import PostBody from '../../componants/Post';
 import Similars from '../../componants/Similars';
+import Styles from '../../styles/FlexContainer.module.css';
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 const Post = ({ data }) => {
 	const [posts, setPosts] = useState({
@@ -27,6 +28,7 @@ const Post = ({ data }) => {
 	}, [data.id]);
 	return (
 		<div
+			className={Styles.container}
 			style={{
 				display: 'flex',
 				alignItems: 'flex-start',

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Carousel from '../componants/Carousel';
 import Categories from '../componants/Categories';
 import cones from '../assets/cones.png';
+import Styles from '../styles/FlexContainer.module.css';
 
 import Post from '../componants/Post';
 
@@ -19,6 +20,7 @@ export default function Home({ data }) {
 
 					<Carousel data={data.LatestPostes.filter((item, i) => i !== 0)} />
 					<div
+						className={Styles.containerReverse}
 						style={{
 							display: 'flex',
 							alignItems: 'flex-start',

@@ -24,19 +24,19 @@
 }
 
 .Categories::-webkit-scrollbar-thumb {
-  background-color: #e95a8a;
-  outline: 5px solid #8d113b;
+  background-color: #4c4c4c;
+  outline: 5px solid #000000;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .Categories::-webkit-scrollbar-thumb:hover {
-  background-color: #e91e63;
+  background-color: #37383a;
 }
 
 .Categories h3 {
-  background: #e91e63;
+  background: #37383a;
   padding: 10px;
   color: white;
   font-weight: 400;
@@ -57,7 +57,7 @@
   border-radius: 7px;
   -webkit-box-shadow: 0 2px 14px gainsboro;
           box-shadow: 0 2px 14px gainsboro;
-  background: linear-gradient(40deg, #eda9c0 13%, #c5a0cd 87%);
+  background: linear-gradient(40deg, #e5d3f9 13%, #ffdde0 87%);
 }
 
 .Categories .Category:hover h4 {
@@ -106,7 +106,7 @@
   width: 5px;
   height: 100%;
   z-index: -1;
-  background-color: #e91e63;
+  background-color: #37383a;
 }
 
 .Categories .Category img {

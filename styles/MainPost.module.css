@@ -1,93 +1,93 @@
 .post {
-  padding: 20px;
-  border-left: 5px solid pink;
-  -webkit-box-shadow: -10px 10px 27px -5px #f500a824;
-          box-shadow: -10px 10px 27px -5px #f500a824;
+	padding: 20px;
+	border-left: 5px solid gainsboro;
+	-webkit-box-shadow: -10px 10px 27px -5px gainsboro;
+	box-shadow: -10px 10px 27px -5px gainsboro;
 }
 
 .post a {
-  color: #e91e63;
+	color: #37383a;
 }
 
 .post ol,
 .post ul {
-  list-style: inside;
+	list-style: inside;
 }
 
 .post ol li,
 .post ul li {
-  margin: 10px 15px;
+	margin: 10px 15px;
 }
 
 .post .has-text-align-center has-text-color {
-  display: none;
+	display: none;
 }
 
 .post iframe {
-  width: 100%;
-  height: calc((60vw - 330px) * 9 / 16);
-  margin: 50px auto;
+	width: 100%;
+	height: calc((60vw - 330px) * 9 / 16);
+	margin: 50px auto;
 }
 
 .post h2 {
-  margin: 50px 0 20px 0;
-  border-left: 10px solid #e91e63;
-  padding: 5px;
-  padding-left: 10px;
+	margin: 50px 0 20px 0;
+	border-left: 10px solid #37383a;
+	padding: 5px;
+	padding-left: 10px;
 }
 
 .post figure {
-  margin: 10px auto;
-  margin-top: 50px;
-  width: 80%;
-  text-align: center;
-  -webkit-box-shadow: 0 0px 14px #0000002e;
-          box-shadow: 0 0px 14px #0000002e;
-  border-radius: 7px;
+	margin: 10px auto;
+	margin-top: 50px;
+	width: 80%;
+	text-align: center;
+	-webkit-box-shadow: 0 0px 14px #0000002e;
+	box-shadow: 0 0px 14px #0000002e;
+	border-radius: 7px;
 }
 
 .post figure figcaption {
-  padding: 10px;
+	padding: 10px;
 }
 
 .post figure img {
-  float: unset;
-  width: 100%;
-  height: auto;
-  border-radius: 7px;
+	float: unset;
+	width: 100%;
+	height: auto;
+	border-radius: 7px;
 }
 
 .post svg {
-  width: 10px;
-  margin: 0 10px;
+	width: 10px;
+	margin: 0 10px;
 }
 
 .post p {
-  margin: 10px 0;
-  font-size: 22px;
-  line-height: 1.7;
+	margin: 10px 0;
+	font-size: 22px;
+	line-height: 1.7;
 }
 
 .post .title {
-  margin-bottom: 50px;
-  padding: 10px;
-  border-left: 5px solid #e91e63;
+	margin-bottom: 50px;
+	padding: 10px;
+	border-left: 5px solid #37383a;
 }
 
 .post .title h1 {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 481px) {
-  .post {
-    width: 100% !important;
-    border: 0;
-    border-top: 5px solid pink;
-    -webkit-box-shadow: 0px -10px 27px -5px #f500a824;
-            box-shadow: 0px -10px 27px -5px #f500a824;
-    margin-top: 20px;
-  }
-  .post figure {
-    width: 100%;
-  }
+	.post {
+		width: 100% !important;
+		border: 0;
+		border-top: 5px solid gainsboro;
+		-webkit-box-shadow: 0px -10px 27px -5px gainsboro;
+		box-shadow: 0px -10px 27px -5px gainsboro;
+		margin-top: 20px;
+	}
+	.post figure {
+		width: 100%;
+	}
 }

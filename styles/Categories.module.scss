@@ -17,16 +17,16 @@
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: #e95a8a;
-		outline: 5px solid #8d113b;
+		background-color: #4c4c4c;
+		outline: 5px solid #000000;
 		cursor: pointer;
 		transition: 0.3s;
 		&:hover {
-			background-color: #e91e63;
+			background-color: #37383a;
 		}
 	}
 	h3 {
-		background: #e91e63;
+		background: #37383a;
 		padding: 10px;
 		color: white;
 		font-weight: 400;
@@ -43,11 +43,7 @@
 		margin: 15px;
 		border-radius: 7px;
 		box-shadow: 0 2px 14px gainsboro;
-		background: linear-gradient(
-			40deg,
-			rgb(237, 169, 192) 13%,
-			rgb(197, 160, 205) 87%
-		);
+		background: linear-gradient(40deg, #e5d3f9 13%, #ffdde0 87%);
 
 		&:hover {
 			h4 {
@@ -88,7 +84,7 @@
 				width: 5px;
 				height: 100%;
 				z-index: -1;
-				background-color: #e91e63;
+				background-color: #37383a;
 			}
 		}
 		img {

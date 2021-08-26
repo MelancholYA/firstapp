@@ -65,7 +65,8 @@
 	}
 }
 .buttons {
-	width: 80%;
+	width: fit-content;
+	max-width: 80%;
 	margin: 20px auto;
 	display: flex;
 	justify-content: flex-start;
@@ -83,12 +84,12 @@
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: #e95a8a;
-		outline: 1px solid #8d113b;
+		background-color: #4c4c4c;
+		outline: 1px solid #000000;
 		cursor: pointer;
 		transition: 0.3s;
 		&:hover {
-			background-color: #e91e63;
+			background-color: #37383a;
 		}
 	}
 	button {
@@ -103,8 +104,8 @@
 		cursor: pointer;
 	}
 	.active {
-		background-color: #e95a8a;
+		background-color: #4c4c4c;
 		color: white;
-		border-color: #8d113b;
+		border-color: #000000;
 	}
 }

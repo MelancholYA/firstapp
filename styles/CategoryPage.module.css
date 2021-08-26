@@ -85,7 +85,10 @@
 }
 
 .buttons {
-  width: 80%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 80%;
   margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,15 +116,15 @@
 }
 
 .buttons::-webkit-scrollbar-thumb {
-  background-color: #e95a8a;
-  outline: 1px solid #8d113b;
+  background-color: #4c4c4c;
+  outline: 1px solid #000000;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .buttons::-webkit-scrollbar-thumb:hover {
-  background-color: #e91e63;
+  background-color: #37383a;
 }
 
 .buttons button {
@@ -139,7 +142,7 @@
 }
 
 .buttons .active {
-  background-color: #e95a8a;
+  background-color: #4c4c4c;
   color: white;
-  border-color: #8d113b;
+  border-color: #000000;
 }

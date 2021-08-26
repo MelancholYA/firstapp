@@ -26,7 +26,6 @@ const Post = ({ data }) => {
 	useEffect(() => {
 		getSimilars();
 	}, [data.id]);
-	console.log(data);
 	return (
 		<>
 			<Head>

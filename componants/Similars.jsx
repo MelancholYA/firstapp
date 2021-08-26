@@ -43,7 +43,10 @@ const Similars = ({ data }) => {
 					data.data.map((categorie) => (
 						<Link href={'/posts/' + categorie.slug} key={categorie.id} passHref>
 							<li className={Styles.Category}>
-								<h4>{categorie.title.rendered}</h4>
+								<h4
+									dangerouslySetInnerHTML={{
+										__html: categorie.title.rendered,
+									}}></h4>
 								<div
 									style={{ fontSize: 14, fontWeight: 500, padding: 10 }}
 									dangerouslySetInnerHTML={{

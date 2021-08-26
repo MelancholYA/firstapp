@@ -15,31 +15,7 @@ export default function Carousel({ data }) {
 		slidesToScroll: 1,
 		arrows: false,
 	};
-	const items = [
-		{
-			key: 1,
-			background: '../assets/bg1.png',
-			source: 'The New York Times',
-			title: 'Must see places for summer',
-			excerpt:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam diam sit ametelit hendrerit rutrum. Nam egestas laoreet ligula, ac elementum risus. Aliquam volutpatex eget elit venenatis, vel luctus arcu pulvinar. ',
-		},
-		{
-			key: 2,
-			background: '../assets/bg2.jpg',
-			source: 'The New York Times',
-			title: 'Must see places for summer',
-			excerpt:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam diam sit ametelit hendrerit rutrum. Nam egestas laoreet ligula, ac elementum risus. Aliquam volutpatex eget elit venenatis, vel luctus arcu pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam diam sit ametelit hendrerit rutrum. Nam egestas laoreet ligula, ac elementum risus. Aliquam volutpatex eget elit venenatis, vel luctus arcu pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam diam sit ametelit hendrerit rutrum. Nam egestas laoreet ligula, ac elementum risus. Aliquam volutpatex eget elit venenatis, vel luctus arcu pulvinar. ',
-		},
-		{
-			key: 3,
-			source: 'The New York Times',
-			title: 'Must see places for summer',
-			excerpt:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam diam sit ametelit hendrerit rutrum. Nam egestas laoreet ligula, ac elementum risus. Aliquam volutpatex eget elit venenatis, vel luctus arcu pulvinar. ',
-		},
-	];
+
 	return (
 		<Slider {...settings}>
 			{data.map((item) => (

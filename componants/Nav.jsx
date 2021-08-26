@@ -13,7 +13,7 @@ const Nav = () => {
 	return (
 		<header className={HeaderStyles.header}>
 			<Link href='/' passHref>
-				<Image src='/vercel.svg' width={120} height={50} passHref />
+				<Image src='/vercel.svg' width={120} height={50} />
 			</Link>
 
 			<button

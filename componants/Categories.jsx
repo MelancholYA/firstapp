@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useContext } from 'react';
 import { PostContext } from './contexts';
 const Categories = ({ data }) => {
-	const { setCategory } = useContext(PostContext);
 	data = data.filter((piece) => piece.description.length !== 0);
+	console.log(data);
 
 	return (
 		<div className={Styles.Categories}>
@@ -29,6 +29,14 @@ const Categories = ({ data }) => {
 							</li>
 						</Link>
 					))}
+				<li className={Styles.More}>
+					<Link
+						href={{
+							pathname: '/categories',
+						}}>
+						All categories
+					</Link>
+				</li>
 			</ul>
 		</div>
 	);

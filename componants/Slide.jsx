@@ -30,7 +30,7 @@ const Slide = ({ item, Styles }) => {
 					{item.author_info?.display_name}
 				</span>
 				<div>
-					<Link href={'posts/' + item.slug} passHref>
+					<Link href={'/posts/' + item.slug} passHref>
 						<h1
 							dangerouslySetInnerHTML={{
 								__html: item.title.rendered,

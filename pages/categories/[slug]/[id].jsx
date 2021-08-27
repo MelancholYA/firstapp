@@ -82,7 +82,7 @@ const Category = ({ categoryData }) => {
 				{pages.map((page) => (
 					<button
 						key={page}
-						className={page === pageNum && Styles.active}
+						className={page === pageNum ? Styles.active : undefined}
 						onClick={() => {
 							setPageNum(page);
 							window.scrollTo(0, 0);

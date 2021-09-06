@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Head from 'next/head';
+import BlogHead from '../../../componants/BlogHead';
 import Link from 'next/link';
 import Styles from '../../../styles/CategoryPage.module.css';
 import useSWR from 'swr';
@@ -21,10 +21,11 @@ const Category = ({ categoryData }) => {
 	);
 	return (
 		<>
-			<Head>
-				<title>Blog Name | {categoryData.name}</title>
-				<meta name='description' content={categoryData.description}></meta>
-			</Head>
+			<BlogHead
+				pageName={categoryData.name}
+				Description={categoryData.description}
+			/>
+
 			<div className={Styles.header}>
 				<h1>{categoryData.name}</h1>
 				<h3>{categoryData.description}</h3>

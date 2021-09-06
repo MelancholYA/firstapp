@@ -1,9 +1,9 @@
-import { useRouter } from 'next/dist/client/router';
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
+
 import PostBody from '../../componants/Post';
 import Similars from '../../componants/Similars';
 import Styles from '../../styles/FlexContainer.module.css';
+import BlogHead from '../../componants/BlogHead';
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 const Post = ({ data }) => {
 	const [posts, setPosts] = useState({
@@ -28,14 +28,11 @@ const Post = ({ data }) => {
 	}, [data.id]);
 	return (
 		<>
-			<Head>
-				<title
-					dangerouslySetInnerHTML={{
-						__html: `Blog name | ${data.title.rendered}`,
-					}}></title>
-				<meta name='description' content={data.excerpt.rendered} />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
+			<BlogHead
+				pageName={data.title.rendered}
+				Description={data.excerpt.rendered}
+			/>
+
 			<div
 				className={Styles.container}
 				style={{

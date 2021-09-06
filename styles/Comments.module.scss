@@ -1,0 +1,36 @@
+.write {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	textarea {
+		width: 100%;
+		margin-top: 25px;
+		border: 0;
+		outline: 0;
+		padding: 15px;
+		background: #4c4c4c2e;
+		border-radius: 7px;
+	}
+	button {
+		padding: 12px 20px;
+		border: 0;
+		background: #dfdfdf;
+		border-radius: 7px;
+		cursor: pointer;
+		margin: 10px;
+	}
+}
+.comments {
+	li {
+		list-style: none;
+		width: 100%;
+		padding: 10px;
+		box-shadow: 0 0 14px gainsboro;
+		border-radius: 7px;
+		p {
+			font-size: 16px;
+			line-height: 1.4;
+			margin: 5px 0;
+		}
+	}
+}

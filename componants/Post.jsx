@@ -1,5 +1,6 @@
 import Styles from '../styles/MainPost.module.css';
 import moment from 'moment';
+
 const Post = ({ width, post }) => {
 	const bodyParts = post.content.rendered.split('Pin Below');
 	//.findIndex((item) => item == 'Pin');
